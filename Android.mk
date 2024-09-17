@@ -40,7 +40,7 @@ $(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS)
 
 
-RECOVERY_KERNEL_MODULES := $(addprefix $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/,$(shell cat device/samsung/a53x/modules.load))
+RECOVERY_KERNEL_MODULES := $(addprefix $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/,$(shell cat device/samsung/m34x/modules.load))
 
 INSTALLED_KERNEL_TARGET := $(PRODUCT_OUT)/kernel
 INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
