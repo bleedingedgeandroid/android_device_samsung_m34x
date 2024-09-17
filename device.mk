@@ -65,15 +65,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@4.0-impl \
-    android.hardware.graphics.allocator@4.0-service \
     android.hardware.graphics.composer@2.4-service \
-    android.hardware.graphics.mapper@4.0-impl \
     gralloc.default
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4 \
     libdrmclearkeyplugin \
     libdrm 
@@ -116,9 +112,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 # NFC
-PRODUCT_PACKAGES += \
-    sec.android.hardware.nfc@1.2-service
-
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     $(DEVICE_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
@@ -227,7 +220,6 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
-    android.hardware.wifi@1.0-service \
     hostapd \
     wpa_supplicant
 
