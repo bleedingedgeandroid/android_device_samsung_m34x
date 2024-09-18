@@ -203,14 +203,6 @@
         <fqname>IKeyMintDevice/default</fqname>
     </hal>
     <hal format="aidl" override="true">
-        <name>android.hardware.security.secureclock</name>
-        <interface>
-            <name>ISecureClock</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>ISecureClock/default</fqname>
-    </hal>
-    <hal format="aidl" override="true">
         <name>android.hardware.security.sharedsecret</name>
         <interface>
             <name>ISharedSecret</name>
@@ -390,10 +382,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISehSkpm/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.snap</name>
-        <fqname>ISehSnap/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.sysinput</name>
