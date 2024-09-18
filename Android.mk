@@ -38,18 +38,4 @@ $(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/lib64/egl/libGLES_mali.so $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS)
-
-
-RECOVERY_KERNEL_MODULES := $(addprefix $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/,$(shell cat device/samsung/m34x/modules.load))
-
-INSTALLED_KERNEL_TARGET := $(PRODUCT_OUT)/kernel
-INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP := $(call intermediates-dir-for,PACKAGING,recovery)/ramdisk_files-timestamp
-
-$(RECOVERY_KERNEL_MODULES): $(INSTALLED_KERNEL_TARGET)
-	@echo "Copying kernel modules to recovery ramdisk: $@"
-	@mkdir -p $(dir $@)
-	cp -r $(VENDOR_RAMDISK_FRAGMENT.dlkm.STAGING_DIR)/lib/ $(TARGET_RECOVERY_ROOT_OUT)/
-
-$(INTERNAL_RECOVERY_RAMDISK_FILES_TIMESTAMP): $(RECOVERY_KERNEL_MODULES)
-
 endif
