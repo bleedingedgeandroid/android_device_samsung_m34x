@@ -1157,7 +1157,7 @@ vendor/firmware/txse1.bin
 vendor/firmware/txse2.bin
 vendor/firmware/volumemonitor.bin
 vendor/firmware/vts.bin
-
+vendor/firmware/gt9895_m34x.bin
 
 ## Fingerprint
 vendor/apex/com.samsung.android.biometrics.face.signed.apex
